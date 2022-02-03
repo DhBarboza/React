@@ -7,6 +7,17 @@ export default function App() {
 
   function calculator() {
     const h = heigth / 100;
+    const bmi = weight / (h * h);
+
+    if (bmi < 18.6) {
+      alert("You are underweight. BMI: " + bmi.toFixed(2));
+    } else if (bmi >= 18.6 && bmi < 24.9) {
+      alert("Ideal weight. BMI: " + bmi.toFixed(2));
+    } else if(bmi >= 24.9 && bmi < 34.9) {
+      alert("Are you overweight. BMI: " + bmi.toFixed(2));
+    } else if (bmi > 34.9) {
+      alert("Be careful, you are obese. BMI: " + bmi.toFixed(2));
+    }
   }
 
   return (
